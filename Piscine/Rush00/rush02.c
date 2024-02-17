@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rush01.c                                           :+:      :+:    :+:   */
+/*   rush02.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bherndle <bherndle@student.42vienna.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 10:58:12 by bherndle          #+#    #+#             */
-/*   Updated: 2024/02/17 22:58:53 by root             ###   ########.fr       */
+/*   Updated: 2024/02/17 22:58:22 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
@@ -39,17 +39,17 @@ void rush(int x, int y)
 	{
 		if (i == 0)
 		{
-			print_line(x, '/', '*', '\\');
+			print_line(x, 'A', 'B', 'A');
 			ft_putchar('\n');
 		}
 		else if (i > 0 && i < y)
 		{
-			print_line(x, '*', ' ', '*');
+			print_line(x, 'B', ' ', 'B');
 			ft_putchar('\n');
 		}
 		else
 		{
-			print_line(x, '\\', '*', '/');
+			print_line(x, 'C', 'B', 'C');
 			ft_putchar('\n');
 		}
 		++i;

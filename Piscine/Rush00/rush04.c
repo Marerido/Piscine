@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rush01.c                                           :+:      :+:    :+:   */
+/*   rush04.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bherndle <bherndle@student.42vienna.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 10:58:12 by bherndle          #+#    #+#             */
-/*   Updated: 2024/02/17 22:58:53 by root             ###   ########.fr       */
+/*   Updated: 2024/02/17 22:57:17 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
@@ -18,7 +18,6 @@ void print_line(int x, int left, int middle, int right)
 	int space;
 	
 	space = 1;
-
 	ft_putchar(left);
 
 	while(space < (x - 1))
@@ -26,7 +25,7 @@ void print_line(int x, int left, int middle, int right)
 	ft_putchar(middle);
 	space++;
 	}
-
+	
 	ft_putchar(right);
 }
 
@@ -39,17 +38,17 @@ void rush(int x, int y)
 	{
 		if (i == 0)
 		{
-			print_line(x, '/', '*', '\\');
+			print_line(x, 'A', 'B', 'C');
 			ft_putchar('\n');
 		}
 		else if (i > 0 && i < y)
 		{
-			print_line(x, '*', ' ', '*');
+			print_line(x, 'B', ' ', 'B');
 			ft_putchar('\n');
 		}
 		else
 		{
-			print_line(x, '\\', '*', '/');
+			print_line(x, 'C', 'B', 'A');
 			ft_putchar('\n');
 		}
 		++i;
