@@ -1,16 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_print_reverse_alphabet.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tunglaub <tunglaub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/16 00:23:54 by tunglaub          #+#    #+#             */
-/*   Updated: 2024/02/17 10:24:09 by tunglaub         ###   ########.fr       */
+/*   Created: 2024/02/15 19:03:31 by tunglaub          #+#    #+#             */
+/*   Updated: 2024/02/17 10:16:05 by tunglaub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c)
+void	ft_print_reverse_alphabet(void)
 {
-	write (1, &c, 1);
+	char	c;
+
+	c = 122;
+	while (c >= 97)
+	{
+		write(1, &c, 1);
+		--c;
+	}
+	write(1, "\n", 1);
 }

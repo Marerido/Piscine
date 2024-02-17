@@ -6,15 +6,19 @@
 /*   By: tunglaub <tunglaub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 16:59:19 by tunglaub          #+#    #+#             */
-/*   Updated: 2024/02/14 17:08:39 by tunglaub         ###   ########.fr       */
+/*   Updated: 2024/02/17 10:15:32 by tunglaub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_print_alphabet(void);
+void	ft_print_alphabet(void)
 {
-		write('Ab');
-}
-int main()
-{
-	ft_print_alphabet;
+	char	c;
+
+	c = 97;
+	while (c <= 122)
+	{
+		write(1, &c, 1);
+		c++;
+	}
+	write(1, "\n", 1);
 }
