@@ -1,1 +1,1 @@
-ip addr| grep ether
+ip addr| grep ether | cut -b 15-31
