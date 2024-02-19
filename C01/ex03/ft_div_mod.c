@@ -6,7 +6,7 @@
 /*   By: tunglaub <tunglaub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/18 00:14:33 by tunglaub          #+#    #+#             */
-/*   Updated: 2024/02/18 00:19:06 by root             ###   ########.fr       */
+/*   Updated: 2024/02/19 19:10:05 by tunglaub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,3 +17,4 @@ void	ft_div_mod(int a, int b, int *div, int *mod)
 
 	*div = a / b;
 	*mod = a % b;
+}

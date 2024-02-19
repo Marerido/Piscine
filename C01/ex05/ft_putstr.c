@@ -6,7 +6,7 @@
 /*   By: root <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/18 19:52:59 by root              #+#    #+#             */
-/*   Updated: 2024/02/18 20:46:11 by root             ###   ########.fr       */
+/*   Updated: 2024/02/19 21:12:57 by tunglaub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,19 @@
 
 void	ft_putstr(char *str)
 {
-	char	n;
+	int	i;
 
-	n = 0;
-	while (str[n])
+	i = 0;
+	while (str[i] != '\0')
 	{
-		write(1,&str[n],n);
-		n++;
+		write(1,&str[i],1);
+		i++;
 	}
 }
 
 int	main(void)
 {
-	ft_putstr("Hey\n");
+	char *str = "hey";
+	ft_putstr(str);
+	return 0;
 }
