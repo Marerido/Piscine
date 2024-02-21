@@ -1,1 +1,1 @@
-find  -type f -name "*.sh" | sed "s/\.sh$//"|tr -d ./
+find . -type f -name "*.sh" | sed "s/\.sh$//"|tr -d ./

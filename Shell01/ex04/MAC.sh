@@ -1,1 +1,1 @@
-ip addr| grep ether | cut -b 15-31
+ifconfig| grep 'ether' | cut -b 15-31 
