@@ -6,27 +6,11 @@
 /*   By: root <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 22:23:10 by root              #+#    #+#             */
-/*   Updated: 2024/02/19 19:09:03 by tunglaub         ###   ########.fr       */
+/*   Updated: 2024/02/20 08:45:40 by tunglaub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_ft(int *nbr)
-{	
-	*nbr = 42;
-}
-
-#include <unistd.h>
-
-int main(void)
 {
-	int c;
-	int *ptr;
-	c = 43;
-	write(1,&c,1);
-	ptr = &c;
-	
-	ft_ft(ptr);
-
-	char z = c;
-	write(1,&z,1);
+	*nbr = 42;
 }

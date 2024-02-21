@@ -6,34 +6,15 @@
 /*   By:  tunglaub <tunglaub@student.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 23:20:11 by tunglaub          #+#    #+#             */
-/*   Updated: 2024/02/19 19:09:37 by tunglaub         ###   ########.fr       */
+/*   Updated: 2024/02/21 12:20:21 by tunglaub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_swap(int *a, int *b)
 {
-	char	c;
+	int	c;
 
 	c = *a;
 	*a = *b;
 	*b = c;
 }
-
-/*
-#include <stdio.h>
-
-int	main()
-{
-	int	i;
-	int	j;
-
-	i = 10;
-	j = 20;
-
-	printf("%d, %d \n", i,j);
-
-	ft_swap(&i, &j);
-
-	printf("%d, %d \n", i, j);
-}
-*/

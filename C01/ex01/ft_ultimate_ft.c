@@ -6,11 +6,11 @@
 /*   By: tunglaub <tunglaub@student.42.fr           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 23:12:36 by tunglaub          #+#    #+#             */
-/*   Updated: 2024/02/19 19:09:17 by tunglaub         ###   ########.fr       */
+/*   Updated: 2024/02/21 12:32:25 by tunglaub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_ultimante_ft(int *********nbr)
-{	
+void	ft_ultimate_ft(int *********nbr)
+{
 	*********nbr = 42;
 }

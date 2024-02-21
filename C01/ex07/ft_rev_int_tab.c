@@ -6,25 +6,23 @@
 /*   By: tunglaub <tunglaub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 06:26:41 by tunglaub          #+#    #+#             */
-/*   Updated: 2024/02/20 07:17:28 by tunglaub         ###   ########.fr       */
+/*   Updated: 2024/02/20 09:18:08 by tunglaub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_rev_int_tab(int *tab, int size)
 {
 	int	c;
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 0;
 	j = size - 1;
-
-	while(i < j)
+	while (i < j)
 	{
 		c = tab[i];
 		tab[i] = tab[j];
 		tab[j] = c;
-
 		++i;
 		--j;
 	}

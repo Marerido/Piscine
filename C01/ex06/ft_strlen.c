@@ -6,7 +6,7 @@
 /*   By: tunglaub <tunglaub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 05:58:20 by tunglaub          #+#    #+#             */
-/*   Updated: 2024/02/20 06:20:45 by tunglaub         ###   ########.fr       */
+/*   Updated: 2024/02/21 12:25:46 by tunglaub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@ int	ft_strlen(char *str)
 {
 	int	i;
 
-	while(str[i] != '\0')
+	i = 0;
+	while (str[i] != '\0')
 	{
 		++i;
 	}
-	return i;
+	return (i);
 }

@@ -1,31 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tunglaub <tunglaub@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/02/20 07:31:24 by tunglaub          #+#    #+#             */
+/*   Updated: 2024/02/21 12:23:17 by tunglaub         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 void	ft_ultimate_div_mod(int *a, int *b)
 {
-	char	c;
-	char	d;
+	int	c;
+	int	d;
 
 	c = *a / *b;
 	d = *a % *b;
-
 	*a = c;
 	*b = d;
 }
-
-/*
-#include <stdio.h>
-
-int main(void)
-{
-	int i;
-	int j;
-
-	i = 10;
-	j = 3;
-
-	printf("%d, %d \n", i, j);
-
-	ft_ultimate_div_mod(&i,&j);
-
-	printf("%d, %d \n", i, j);
-}
-*/
