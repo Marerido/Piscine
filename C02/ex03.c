@@ -1,4 +1,4 @@
-#include <stdio.h>
+
 
 int	ft_str_is_numeric(char *str)
 {
@@ -7,10 +7,10 @@ int	ft_str_is_numeric(char *str)
 	i = 0;
 
 	if (str[i] == '\0')
-        return (1);
+        	return (1);
 	while (str[i] != '\0')
 	{
-		if (str[i] < 48 && str [i] > 57)
+		if (str[i] < '0' || str [i] > '9')
 		{
 			return (0);
 		}
@@ -18,6 +18,8 @@ int	ft_str_is_numeric(char *str)
 	}
 	return (1);
 }
+
+#include <stdio.h>
 
 int	main()
 {

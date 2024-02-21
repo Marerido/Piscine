@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 int	ft_str_is_uppercase(char *str)
 {
 	int	i;
@@ -11,7 +9,7 @@ int	ft_str_is_uppercase(char *str)
 
 	while (str[i] != '\0')
 	{
-		if (str[i] < 'A' && str[i] > 'Z'))
+		if (str[i] < 'A' || str[i] > 'Z')
 		{
 			return (0);
 		}
@@ -19,6 +17,8 @@ int	ft_str_is_uppercase(char *str)
 	}
 	return (1);
 }
+
+#include <stdio.h>
 
 int	main()
 {

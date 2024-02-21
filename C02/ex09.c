@@ -6,9 +6,6 @@ char *ft_strlowcase(char *str)
 
 	i = 0;
 
-	if (str[i] == '\0')
-        return (1);
-
 	while (str[i] != '\0')
 	{
 		if (str[i] >= 'A' && str [i] <= 'Z')
@@ -17,7 +14,7 @@ char *ft_strlowcase(char *str)
 		}
 		i++;
 	}
-	return (str)
+	return (str);
 }
 
 char    *ft_strcapitalize(char *str)
@@ -40,6 +37,7 @@ char    *ft_strcapitalize(char *str)
 
 int	main()
 {
-	printf("%d", ft_str_is_printable("asA?"));
+	char str[] = "shfdj sa Sdgf-a ?s";
+	printf("%s", ft_strcapitalize(str);
 //	printf("\n%d", ft_str_is_printable("\n\t\v\f"));
 }

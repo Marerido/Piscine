@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 int	ft_str_is_printable(char *str)
 {
 	int	i;
@@ -11,7 +9,7 @@ int	ft_str_is_printable(char *str)
 
 	while (str[i] != '\0')
 	{
-		if (str[i] < 32 && str [i] > 126)
+		if (str[i] < 32 || str [i] > 126)
 		{
 			return (0);
 		}
@@ -20,6 +18,7 @@ int	ft_str_is_printable(char *str)
 	return (1);
 }
 
+#include <stdio.h>
 int	main()
 {
 	printf("%d", ft_str_is_printable("ABDELKFSCO?I340990%"));

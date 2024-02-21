@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 int	ft_str_is_alpha(char *str)
 {
 	int	i;
@@ -19,9 +17,12 @@ int	ft_str_is_alpha(char *str)
 	}
 	return (1);
 }
+
+#include <stdio.h>
 int	main()
 {
-	printf("%d", ft_str_is_alpha("abcdefghijkl"));
+	printf("%d\n", ft_str_is_alpha(""));
+	printf("%d", ft_str_is_alpha("a2bcdefghijkl"));
 	printf("\n%d", ft_str_is_alpha("abc1defghijkl"));
 	printf("\n%d", ft_str_is_alpha("-_134556efghij67"));
 }

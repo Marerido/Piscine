@@ -1,13 +1,8 @@
-#include <stdio.h>
-
 char *ft_strlowcase(char *str)
 {
 	int	i;
 
 	i = 0;
-
-	if (str[i] == '\0')
-        return (1);
 
 	while (str[i] != '\0')
 	{
@@ -17,11 +12,13 @@ char *ft_strlowcase(char *str)
 		}
 		i++;
 	}
-	return (str)
+	return (str);
 }
 
+#include <stdio.h>
 int	main()
-{
-	printf("%d", ft_str_is_printable("asA?"));
+{	
+	char str[] = "asAfd)§";
+	printf("%s", ft_strlowcase(str));
 //	printf("\n%d", ft_str_is_printable("\n\t\v\f"));
 }
