@@ -14,14 +14,14 @@ char	*ft_strstr(char *str, char *to_find)
 	}
 	while (str[i] != '\0')
 	{
-		if (str[i] == to_find[j])
+		while (to_find[j] != '\0' && str[i+j] == to_find[j])
 		{
-			to_find[j] = str[i];
+			++j;
 		}
-		++i;
-		++j;
+		if (j == length)
+			return (str);
 	}
-	return (to_find);
+	++i;
 }
 
 #include <stdio.h>
