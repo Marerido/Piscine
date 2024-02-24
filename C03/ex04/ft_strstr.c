@@ -5,30 +5,23 @@ char	*ft_strstr(char *str, char *to_find)
 	int	length;
 
 	i = 0;
-	length = 0;
 	j = 0;
 
-	while (to_find[length] != '\0')
-	{
-		++length;
-	}
 	while (str[i] != '\0')
 	{
-		j = 0; 
-		while (to_find[j] != '\0' && str[i] == to_find[j])
+		j = 0;
+		while (to_find[j] != '\0' && str[i+j] == to_find[j])
 		{
 			++j;
-
 		}
-		if (j == length)
-			return (to_find);
+		if(to_find[j] == '\0')
+			return(str + i);
 		++i;
 	}
-	return NULL;
 }
 
 #include <stdio.h>
-int	main(void)
+int	main()
 {
-	printf("%s\n", ft_strstr("Hello World fhjhj", "Wtorld"));
+	printf("%s\n", ft_strstr("Hello World Da", "World"));
 }
