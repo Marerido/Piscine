@@ -14,18 +14,21 @@ char	*ft_strstr(char *str, char *to_find)
 	}
 	while (str[i] != '\0')
 	{
-		while (to_find[j] != '\0' && str[i+j] == to_find[j])
+		j = 0; 
+		while (to_find[j] != '\0' && str[i] == to_find[j])
 		{
 			++j;
+
 		}
 		if (j == length)
-			return (str);
+			return (to_find);
+		++i;
 	}
-	++i;
+	return NULL;
 }
 
 #include <stdio.h>
-int	main()
+int	main(void)
 {
-	printf("%s\n", ft_strstr("HelloWorld", "World"));
+	printf("%s\n", ft_strstr("Hello World fhjhj", "Wtorld"));
 }

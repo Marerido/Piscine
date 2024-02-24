@@ -19,9 +19,9 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 
 int	main(void)
 {
-	char str1[] = "Hello";
-	char str2[] = "Hello World";
+	char str1[] = "Hello Worlda du";
+	char str2[] = "Hello Worldz";
 	
-	printf("%d\n",  ft_strncmp(str1, str2, 8));
+	printf("%d\n",  ft_strncmp(str1, str2, 15));
 	printf("%d\n",  ft_strncmp(str1, str2, 4));
 }
