@@ -3,25 +3,10 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 	unsigned int	i;
 
 	i = 0;
-	while ((s1[i] != '\0' || s2[i] != '\0') && i < n)
+	if (n == 0)
+		return (0);
+	while (s1[i] == s2[i] && (s1[i] != '\0' || s2[i] != '\0') && i < n)
 	{
-		if (s1[i] == s2[i])
-			++i;
-		else if (s1[i] < s2[i])
-			return (1);
-		else
-			return (-1);
+		++i;
 	}
-	return (0);
-}
-
-#include <stdio.h>
-
-int	main(void)
-{
-	char str1[] = "Hello Worlda du";
-	char str2[] = "Hello Worldz";
-	
-	printf("%d\n",  ft_strncmp(str1, str2, 15));
-	printf("%d\n",  ft_strncmp(str1, str2, 4));
-}
+	return (s1[i] - s2[i]);
