@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tunglaub <tunglaub@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/02/26 14:35:53 by tunglaub          #+#    #+#             */
+/*   Updated: 2024/02/26 14:45:00 by tunglaub         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 char *ft_strcat(char *dest, char *src)
 {
 	int	i;
@@ -19,10 +31,13 @@ char *ft_strcat(char *dest, char *src)
 }
 
 #include <stdio.h>
-int	main()
-{
-	char dest[] = "OiOi";
-	char src[] = "Brudi";
+#include <string.h>
 
-	printf("%s\n", ft_strcat(dest,src));
+int	main(void)
+{
+	char dest[100] = "Hallo";
+	char src[] = "Duda";
+
+//	printf("%s\n", strcat(dest, src));
+	printf("%s\n", ft_strcat(dest, src));
 }
