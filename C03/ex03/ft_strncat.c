@@ -6,11 +6,11 @@
 /*   By: tunglaub <tunglaub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 14:46:01 by tunglaub          #+#    #+#             */
-/*   Updated: 2024/02/26 14:49:59 by tunglaub         ###   ########.fr       */
+/*   Updated: 2024/02/26 15:46:33 by tunglaub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strncat(char *dest, char *src, unsigned int nb)
+char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
 	unsigned int	i;
 	unsigned int	j;
@@ -21,20 +21,11 @@ char *ft_strncat(char *dest, char *src, unsigned int nb)
 	{
 		++i;
 	}
-	while (src[j] != '\0' && j < nb )
+	while (src[j] != '\0' && j < nb)
 	{
 		dest[i + j] = src[j];
 		++j;
 	}
-	dest[i+j] = '\0';
+	dest[i + j] = '\0';
 	return (dest);
-}
-
-#include <stdio.h>
-int	main()
-{
-	char dest[] = "OiOi";
-	char src[] = "Brudi";
-
-	printf("%s\n", ft_strncat(dest,src,2));
 }

@@ -21,16 +21,3 @@ int	ft_strcmp(char *s1, char *s2)
 	}
 	return (s1[i] - s2[i]);
 }
-
-#include <stdio.h>
-#include <string.h>
-
-int	main(void)
-{
-	char s1[] = "Hallo";
-	char s2[] = "Hallo";
-
-	printf("%s\n%s\n", s1, s2);
-	printf("%d\n", ft_strcmp(s1,s2));
-	printf("%d\n", strcmp(s1, s2));
-}
