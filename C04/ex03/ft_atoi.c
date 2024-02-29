@@ -39,5 +39,5 @@ int	ft_atoi(char *str)
 #include <stdio.h>
 int	main(void)
 {
-	printf("%d\n", ft_atoi("   --+qwer"));
+	printf("%d\n", ft_atoi("   --43+54qw3er"));
 }

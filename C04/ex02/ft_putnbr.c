@@ -5,37 +5,42 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tunglaub <tunglaub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/26 16:20:53 by tunglaub          #+#    #+#             */
-/*   Updated: 2024/02/28 23:56:42 by root             ###   ########.fr       */
+/*   Created: 2024/02/29 15:57:22 by tunglaub          #+#    #+#             */
+/*   Updated: 2024/02/29 16:59:06 by tunglaub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
 void	ft_putnbr(int nb)
 {
-	int	a;
-
 	if (nb == -2147483648)
 	{
-		write(1, "-2147483648", 11);
-		return ;
+		ft_putchar('-');
+		ft_putchar('2');
+		nb = 147483648;
 	}
 	if (nb < 0)
 	{
-		write(1, "-", 1);
+		ft_putchar('-');
 		nb = -nb;
-		ft_putnbr(nb / 10);
-		ft_putnbr(nb % 10);
 	}
-	else if (nb > 9)
+	if (nb >= 10)
 	{
 		ft_putnbr(nb / 10);
-		ft_putnbr(nb % 10);
 	}
-	else
-	{
-		a = nb + '0';
-		write(1, &a, 1);
-	}
+	ft_putchar('0' + nb % 10);
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+int	main(int argc, char **argv)
+{
+	if (argc > 0)
+		ft_putnbr(atoi(argv[1]));
 }
