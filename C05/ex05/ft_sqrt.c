@@ -6,7 +6,7 @@
 /*   By: tunglaub <tunglaub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 19:35:37 by tunglaub          #+#    #+#             */
-/*   Updated: 2024/02/27 19:57:33 by tunglaub         ###   ########.fr       */
+/*   Updated: 2024/02/28 12:22:30 by tunglaub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,4 @@ int	ft_sqrt(int nb)
 		}
 	}
 	return (low + 1);
-}
-
-int	main(void)
-{
-	printf("%d\n", ft_sqrt(3025));
-	return (0);
 }

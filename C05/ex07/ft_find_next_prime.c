@@ -1,38 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_find_next_prime.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tunglaub <tunglaub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/29 15:57:22 by tunglaub          #+#    #+#             */
-/*   Updated: 2024/02/29 16:59:06 by tunglaub         ###   ########.fr       */
+/*   Created: 2024/02/29 19:25:24 by tunglaub          #+#    #+#             */
+/*   Updated: 2024/02/29 19:45:30 by tunglaub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+int	ft_is_prime(int number)
 {
-	write(1, &c, 1);
+	int	i;
+
+	i = 2;
+	if (number <= 1)
+		return (0);
+	while (number / i > 1)
+	{
+		if (number % i == 0)
+			return (0);
+		i++;
+	}
+	return (1);
 }
 
-void	ft_putnbr(int nb)
+int	ft_find_next_prime(int nb)
 {
-	if (nb == -2147483648)
+	int	j;
+
+	j = 0;
+	if (ft_is_prime(nb) == 0)
 	{
-		ft_putchar('-');
-		ft_putchar('2');
-		nb = 147483648;
+		while (ft_is_prime(nb + j) == 0)
+		{
+			j++;
+		}
 	}
-	if (nb < 0)
-	{
-		ft_putchar('-');
-		nb = -nb;
-	}
-	if (nb >= 10)
-	{
-		ft_putnbr(nb / 10);
-	}
-	ft_putchar('0' + nb % 10);
+	return (nb + j);
 }

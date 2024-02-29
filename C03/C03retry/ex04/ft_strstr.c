@@ -1,38 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tunglaub <tunglaub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/29 15:57:22 by tunglaub          #+#    #+#             */
-/*   Updated: 2024/02/29 16:59:06 by tunglaub         ###   ########.fr       */
+/*   Created: 2024/02/26 14:50:25 by tunglaub          #+#    #+#             */
+/*   Updated: 2024/02/27 06:46:53 by tunglaub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+char	*ft_strstr(char *str, char *to_find)
 {
-	write(1, &c, 1);
-}
+	int	i;
+	int	j;
 
-void	ft_putnbr(int nb)
-{
-	if (nb == -2147483648)
+	i = 0;
+	if (to_find[0] == '\0')
 	{
-		ft_putchar('-');
-		ft_putchar('2');
-		nb = 147483648;
+		return (str);
 	}
-	if (nb < 0)
+	while (str[i] != '\0')
 	{
-		ft_putchar('-');
-		nb = -nb;
+		j = 0;
+		while (str[i + j] == to_find[j])
+		{
+			if (to_find[j + 1] == '\0')
+			{
+				return (str + i);
+			}
+			++j;
+		}
+		++i;
 	}
-	if (nb >= 10)
-	{
-		ft_putnbr(nb / 10);
-	}
-	ft_putchar('0' + nb % 10);
+	return (0);
 }

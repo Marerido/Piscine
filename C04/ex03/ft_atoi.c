@@ -35,9 +35,3 @@ int	ft_atoi(char *str)
 	number = number * sign;
 	return (number);
 }
-
-#include <stdio.h>
-int	main(void)
-{
-	printf("%d\n", ft_atoi("   --43+54qw3er"));
-}
