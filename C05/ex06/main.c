@@ -1,46 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_find_next_prime.c                               :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tunglaub <tunglaub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/29 19:25:24 by tunglaub          #+#    #+#             */
-/*   Updated: 2024/03/02 12:04:27 by tunglaub         ###   ########.fr       */
+/*   Created: 2024/03/02 13:49:40 by tunglaub          #+#    #+#             */
+/*   Updated: 2024/03/02 13:52:31 by tunglaub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_is_prime(int number)
+#include <stdio.h>
+#include <stdlib.h>
+
+int	ft_is_prime(int nb));
+
+int	main(int argc, char **argv)
 {
-	long int	i;
-	long int	l;
-
-	l = number;
-	i = 2;
-	if (l <= 1)
-		return (0);
-	while (l / i > 1)
-	{
-		if (l % i == 0)
-			return (0);
-		i++;
-	}
-	return (1);
+	if (argc == 2)
+		printf("%d\n", ft_is_prime(atoi(argv[1])));
 }
-
-int	ft_find_next_prime(int nb)
-{
-	long int	j;
-	long int	l;
-
-	l = nb;
-	j = 0;
-	if (ft_is_prime(l) == 0)
-	{
-		while (ft_is_prime(l + j) == 0)
-		{
-			j++;
-		}
-	}
-	return (l + j);
-}
+	
+	

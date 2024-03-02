@@ -6,20 +6,22 @@
 /*   By: tunglaub <tunglaub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 17:17:44 by tunglaub          #+#    #+#             */
-/*   Updated: 2024/02/29 17:30:01 by tunglaub         ###   ########.fr       */
+/*   Updated: 2024/03/02 12:01:12 by tunglaub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_is_prime(int nb)
 {
 	long int	i;
+	long int	l;
 
+	l = nb;
 	i = 2;
-	if (nb <= 1)
+	if (l <= 1)
 		return (0);
-	while (nb / i > 1)
+	while (l / i > 1)
 	{
-		if (nb % i == 0)
+		if (l % i == 0)
 			return (0);
 		i++;
 	}

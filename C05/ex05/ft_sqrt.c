@@ -6,7 +6,7 @@
 /*   By: tunglaub <tunglaub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 19:35:37 by tunglaub          #+#    #+#             */
-/*   Updated: 2024/02/28 12:22:30 by tunglaub         ###   ########.fr       */
+/*   Updated: 2024/03/02 12:06:43 by tunglaub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,12 @@
 int	ft_sqrt(int nb)
 {
 	int	low;
+	long long	mid;
 	int	high;
-	int	mid;
 
 	low = 0;
 	high = nb;
-	if (nb < 0)
-		return (-1);
-	if (nb == 0)
+	if (high <= 0 || nb > 2147395600)
 		return (0);
 	while ((high - low) > 1)
 	{
@@ -36,5 +34,8 @@ int	ft_sqrt(int nb)
 			high = mid;
 		}
 	}
-	return (low + 1);
+	if ((low + 1) * (low + 1) == nb)
+		return (low + 1);
+	else
+		return (0);
 }
