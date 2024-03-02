@@ -13,7 +13,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int	ft_is_prime(int nb));
+int	ft_is_prime(int nb);
 
 int	main(int argc, char **argv)
 {

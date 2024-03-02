@@ -6,7 +6,7 @@
 /*   By: tunglaub <tunglaub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 19:35:37 by tunglaub          #+#    #+#             */
-/*   Updated: 2024/03/02 12:06:43 by tunglaub         ###   ########.fr       */
+/*   Updated: 2024/03/02 21:42:40 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_sqrt(int nb)
 {
-	int	low;
+	long int	low;
 	long long	mid;
-	int	high;
+	long int	high;
 
 	low = 0;
 	high = nb;
