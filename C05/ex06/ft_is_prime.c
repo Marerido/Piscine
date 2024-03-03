@@ -6,7 +6,7 @@
 /*   By: tunglaub <tunglaub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 17:17:44 by tunglaub          #+#    #+#             */
-/*   Updated: 2024/03/02 12:01:12 by tunglaub         ###   ########.fr       */
+/*   Updated: 2024/03/03 13:42:32 by tunglaub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_is_prime(int nb)
 	i = 2;
 	if (l <= 1)
 		return (0);
-	while (l / i > 1)
+	while (l/i >= i)
 	{
 		if (l % i == 0)
 			return (0);

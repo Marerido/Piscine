@@ -1,46 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_find_next_prime.c                               :+:      :+:    :+:   */
+/*   ft_ultimate_range.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tunglaub <tunglaub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/29 19:25:24 by tunglaub          #+#    #+#             */
-/*   Updated: 2024/03/03 13:44:10 by tunglaub         ###   ########.fr       */
+/*   Created: 2024/03/03 11:57:36 by tunglaub          #+#    #+#             */
+/*   Updated: 2024/03/03 13:49:53 by tunglaub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_is_prime(int number)
-{
-	long int	i;
-	long int	l;
+#include <stdlib.h>
 
-	l = number;
-	i = 2;
-	if (l <= 1)
+int	ft_ultimate_range(int **range, int min, int max)
+{
+	int	*ptr;
+	int	i;
+
+	i = 0;
+	if (max <= min)
 		return (0);
-	while (l / i >= i)
+	range = max - min;
+	if (!(ptr = (int*)malloc((*int) * range)))
+		return (-1);
+	while (min < max)
 	{
-		if (l % i == 0)
-			return (0);
+		ptr[i] = min;
 		i++;
+		min++;
 	}
-	return (1);
-}
 
-int	ft_find_next_prime(int nb)
-{
-	long int	j;
-	long int	l;
-
-	l = nb;
-	j = 0;
-	if (ft_is_prime(l) == 0)
-	{
-		while (ft_is_prime(l + j) == 0)
-		{
-			j++;
-		}
-	}
-	return (l + j);
-}
