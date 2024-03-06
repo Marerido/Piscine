@@ -22,7 +22,7 @@ int	ft_ultimate_range(int **range, int min, int max)
 	if (max <= min)
 		return (0);
 	distance = max - min;
-	ptr = (int*)malloc(sizeof(int) * distance);
+	ptr = (int *)malloc(sizeof(int) * distance);
 	if (ptr == NULL)
 		return (-1);
 	while (min < max)

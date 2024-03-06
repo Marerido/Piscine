@@ -6,7 +6,7 @@
 /*   By: tunglaub <tunglaub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 11:58:07 by tunglaub          #+#    #+#             */
-/*   Updated: 2024/03/03 11:58:09 by tunglaub         ###   ########.fr       */
+/*   Updated: 2024/03/06 11:48:35 by tunglaub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,15 @@ int	*ft_range(int min, int max)
 	int	*p;	
 
 	i = 0;
-
 	while (min >= max)
-		return NULL;
-	if (!(p = (int*)malloc(sizeof(int)*(max - min + 1))))
-		return NULL;
+	{
+		return (NULL);
+	}
+	p = (int *)malloc(sizeof(int) * (max - min + 1));
+	if (!p)
+	{
+		return (NULL);
+	}
 	while (min < max)
 	{
 		p[i] = min;
@@ -30,4 +34,4 @@ int	*ft_range(int min, int max)
 		min++;
 	}
 	return (p);
-}	
+}

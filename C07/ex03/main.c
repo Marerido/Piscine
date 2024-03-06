@@ -1,43 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tunglaub <tunglaub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/03 11:57:52 by tunglaub          #+#    #+#             */
-/*   Updated: 2024/03/06 11:52:12 by tunglaub         ###   ########.fr       */
+/*   Created: 2024/03/06 10:58:12 by tunglaub          #+#    #+#             */
+/*   Updated: 2024/03/06 10:58:36 by tunglaub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
-int	ft_strlen(char *str)
+char *ft_strjoin(int size, char **strs, char *sep);
+
+int main()
 {
-	int	i;
+    char *strs[] = {"Hallo", "Welt", "42", NULL};
+    char *sep = "+ - + ";
+    int size = 3; // Anzahl der Elemente in strs
 
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
-
-char	*ft_strdup(char *src)
-{
-	int		i;
-	char	*place;
-
-	i = 0;
-	place = (char *)malloc(sizeof(char) * ft_strlen(src) + 1);
-	if (!place)
-		return (NULL);
-	while (src[i] != '\0')
-	{
-		place[i] = src[i];
-		i++;
-	}
-	place[i] = '\0';
-	return (place);
+    char *result = ft_strjoin(size, strs, sep);
+    int i = 0;
+    while (strs[i] != NULL)
+	    i++;
+    if (result)
+    {
+        printf("Ergebnis: %s\n", result);
+        free(result); // Speicher freigeben
+    }
+    return 0;
 }
